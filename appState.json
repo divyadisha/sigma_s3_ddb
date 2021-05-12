@@ -1,0 +1,176 @@
+{
+  "EDITOR_STATE": {
+    "allProjectFiles": {
+      "314760c3-6743-4600-b970-5264d35331f8": {
+        "id": "314760c3-6743-4600-b970-5264d35331f8",
+        "parent": null,
+        "name": "sigma_s3_ddb.py",
+        "type": "PYTHON_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "sigma_s3_ddb.py",
+        "cursor": {
+          "lineNumber": 59,
+          "column": 1
+        },
+        "config": {
+          "runtime": "python3.8",
+          "handler": "readhandler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": [
+            "arn:aws:lambda:us-east-1:770693421928:layer:Klayers-python38-pandas:32"
+          ],
+          "name": "sigmas3ddb"
+        },
+        "triggers": [],
+        "lastUpdated": 1620821619734,
+        "testCases": {
+          "ad6a8b42-b19a-4de5-91b1-36627e2ce730": {
+            "id": "ad6a8b42-b19a-4de5-91b1-36627e2ce730",
+            "name": "Test event",
+            "functionId": "314760c3-6743-4600-b970-5264d35331f8",
+            "event": "{\r\n    \"key1\": \"value1\",\r\n    \"key2\": \"value2\",\r\n    \"key3\": \"value3\"\r\n}",
+            "eventTemplate": "hello-world"
+          }
+        }
+      },
+      "9ff45768-6842-407b-ac0d-ee846d7cf47d": {
+        "id": "9ff45768-6842-407b-ac0d-ee846d7cf47d",
+        "parent": null,
+        "name": "s3_read.py",
+        "type": "PYTHON_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "s3_read.py",
+        "cursor": {
+          "lineNumber": 16,
+          "column": 17
+        },
+        "config": {
+          "runtime": "python3.8",
+          "handler": "read_file",
+          "timeout": 60,
+          "memory": 128,
+          "layers": [
+            "arn:aws:lambda:us-east-1:770693421928:layer:Klayers-python38-pandas:32"
+          ],
+          "name": "s3read"
+        },
+        "triggers": [],
+        "lastUpdated": 1620821543346,
+        "testCases": {
+          "61b39085-4106-44a7-9aca-7f5747455b30": {
+            "id": "61b39085-4106-44a7-9aca-7f5747455b30",
+            "name": "Test event",
+            "functionId": "9ff45768-6842-407b-ac0d-ee846d7cf47d",
+            "event": "{\r\n    \"key1\": \"value1\",\r\n    \"key2\": \"value2\",\r\n    \"key3\": \"value3\"\r\n}",
+            "eventTemplate": "hello-world"
+          }
+        }
+      },
+      "57ae70cb-927f-4408-bd8a-d00d0c86f3ed": {
+        "id": "57ae70cb-927f-4408-bd8a-d00d0c86f3ed",
+        "parent": null,
+        "name": "requirements.txt",
+        "type": "TEXT_FILE",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "requirements.txt"
+      },
+      "612ce153-60d5-4fde-9d0c-32f4d6de30b2": {
+        "id": "612ce153-60d5-4fde-9d0c-32f4d6de30b2",
+        "parent": null,
+        "name": "insert_ddb.py",
+        "type": "PYTHON_FILE",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "insert_ddb.py",
+        "lastUpdated": 1620821524750
+      }
+    },
+    "openFiles": [
+      "9ff45768-6842-407b-ac0d-ee846d7cf47d"
+    ],
+    "currentFileId": "9ff45768-6842-407b-ac0d-ee846d7cf47d",
+    "resources": {
+      "s3awssigmabocket": {
+        "name": "s3awssigmabocket",
+        "type": "S3",
+        "config": {
+          "mode": 1,
+          "bucket": {
+            "name": "awssigmabocket"
+          }
+        }
+      },
+      "ddbemptable": {
+        "name": "ddbemptable",
+        "type": "DynamoDB",
+        "config": {
+          "mode": 1,
+          "table": {
+            "arn": "arn:aws:dynamodb:us-east-1:663043590925:table/emptable",
+            "name": "emptable",
+            "partitionKey": "id",
+            "partitionKeyType": "N",
+            "hasSortKey": false,
+            "sortKey": "",
+            "sortKeyType": "",
+            "payPerRequest": true,
+            "mode": 1,
+            "secondaryIndexes": {}
+          }
+        }
+      }
+    },
+    "customTemplate": {
+      "syntax": "JSON",
+      "overrideDefault": false,
+      "dialect": null,
+      "definitions": null
+    },
+    "envVariables": [
+      {
+        "lambdaId": "all",
+        "varKey": "SIGMA_AWS_ACC_ID",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": false
+      }
+    ],
+    "packageJSON": {
+      "dependencies": {
+        "boto3": {
+          "name": "boto3",
+          "language": "python",
+          "version": "1.16.43",
+          "dev": true,
+          "notRemovable": false
+        }
+      }
+    }
+  },
+  "PROJECT_META": {
+    "sigmaVersion": "1.8.0",
+    "projectName": "sigma_s3_ddb",
+    "projectDescription": "",
+    "projectVersion": "1.0.0",
+    "projectRegion": "us-east-1",
+    "platform": "AWS",
+    "language": "python",
+    "platformRegions": {}
+  },
+  "VCS_STATE": {
+    "provider": "GitHub",
+    "repo": {
+      "name": "sigma_s3_ddb",
+      "url": "https://github.com/divyadisha/sigma_s3_ddb"
+    }
+  }
+}
